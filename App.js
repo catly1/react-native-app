@@ -26,11 +26,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Game from './game.js';
-const Util = require("./util");
+import Game from './src/game';
+const Util = require("./src/util");
 const spritesheet = new Image();
-spritesheet.src = "../images/spritesheet.png";
-const jumpSound = new Audio('../audio/jump1.wav')
+spritesheet.src = "./images/spritesheet.png";
+const jumpSound = new Audio('./audio/jump1.wav')
 
 
 const App: () => React$Node = () => {
