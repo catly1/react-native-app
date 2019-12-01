@@ -29,7 +29,7 @@ import {
 import Game from './src/game';
 const Util = require("./src/util");
 const spritesheet = require("./images/spritesheet.png");
-const jumpSound = new Audio('./audio/jump1.wav')
+// const jumpSound = require('./audio/jump1.wav')
 
 
 const App: () => React$Node = () => {
