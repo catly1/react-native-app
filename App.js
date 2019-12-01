@@ -28,8 +28,7 @@ import {
 
 import Game from './src/game';
 const Util = require("./src/util");
-const spritesheet = new Image();
-spritesheet.src = "./images/spritesheet.png";
+const spritesheet = require("./images/spritesheet.png");
 const jumpSound = new Audio('./audio/jump1.wav')
 
 
@@ -231,7 +230,7 @@ const App: () => React$Node = () => {
 
             Util.get("/dist/startscreen.json", req => {
               gameInstance.setup(JSON.parse(req.responseText));
-              Audio("../audio/start.mp3");
+              Audio("./audio/start.mp3");
               frame();
             });
 

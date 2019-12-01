@@ -1,9 +1,9 @@
 const Util = require("./util");
-import Entity from './entity.js'
-const twinSheet = new Image()
-const twinSheet2 = new Image()
-twinSheet.src = "../images/twinspritesheet.png"
-twinSheet2.src = "../images/twinspritesheet2.png"
+import Entity from './entity.js';
+const twinSheet = require("../images/twinspritesheet.png")
+const twinSheet2 = require("../images/twinspritesheet2.png")
+// twinSheet.src = "../images/twinspritesheet.png"
+// twinSheet2.src = "../images/twinspritesheet2.png"
 
 let TWIN1ANIMATIONS = {
     IDLE: { x: 0, y: 0, w: 245, h: 245, frames: 24, fps: 10 },

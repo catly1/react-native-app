@@ -195,7 +195,7 @@ window.addEventListener("DOMContentLoaded", e => {
 
     Util.get("/dist/startscreen.json", req => {
         gameInstance.setup(JSON.parse(req.responseText));
-        Audio("../audio/start.mp3");
+        Audio("./audio/start.mp3");
         frame();
     });   
 

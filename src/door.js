@@ -1,7 +1,7 @@
 import Entity from './entity.js'
 const Util = require("./util")
-const doorSprite = new Image()
-doorSprite.src = "../images/door.png"
+const doorSprite = require("../images/door.png")
+
 
 export default class Door extends Entity {
     constructor(options, object, gameState) {

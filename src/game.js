@@ -3,10 +3,8 @@ import Enemy from './enemy.js';
 import Door from './door.js';
 import library from "../images/spritesheetAtlast.js";
 const Util = require("./util");
-const staticBackground1 = new Image();
-staticBackground1.src = '../images/staticbackground1.png';
-const animatedBackground1 = new Image();
-animatedBackground1.src = "../images/anibackground1.png";
+const staticBackground1 = require('../images/staticbackground1.png');
+const animatedBackground1 = require("../images/anibackground1.png");
 
 class Game {
     constructor(options) {
