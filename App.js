@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import { Image } from "react-native-canvas";
 import {
   SafeAreaView,
   StyleSheet,
@@ -28,20 +29,16 @@ import {
 
 import Game from './src/game';
 const Util = require("./src/util");
-const spritesheet = require("./images/spritesheet.png");
-// const jumpSound = require('./audio/jump1.wav')
-
 
 const App: () => React$Node = () => {
-  return (
-      <WebView
+      return <WebView
         originWhitelist={['*']}
         source={{ html: '<canvas id="canvas"></canvas>' }}
         injectJavaScript={()=>{
 
           // Constants
 
-
+          debugger
           const MAPSIZE = { tw: 21, th: 12 },
             TILESIZE = 70,
             UNIT = TILESIZE,
@@ -124,6 +121,10 @@ const App: () => React$Node = () => {
             const sidebar = document.getElementById("sidebar")
             sidebar.style.cssText = `height: ${canvas.clientHeight}px`
 
+            const spritesheet = new Image(ctx);
+            spritesheet.src = "./images/spritesheet.png";
+
+            debugger
             const options = {
               ctx,
               MAPSIZE,
@@ -285,7 +286,6 @@ const App: () => React$Node = () => {
 
         }}
       />
-  );
 };
 
 const styles = StyleSheet.create({
